@@ -1,0 +1,39 @@
+{
+  "name": "yealink-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Yealink YMCS & RPS platform integration",
+  "main": "build/index.js",
+  "bin": {
+    "yealink-mcp-server": "build/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node build/index.js",
+    "watch": "tsx watch src/index.ts",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean"
+  },
+  "keywords": ["mcp", "model-context-protocol", "yealink", "ymcs", "rps", "voip"],
+  "author": "OIT, LLC",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "axios": "^1.6.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "rimraf": "^5.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OITApps/yealink-mcp-server.git"
+  }
+}
